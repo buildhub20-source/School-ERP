@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "postinstall": "prisma generate",
     "poc": "node scripts/poc.mjs",
     "poc:reset": "node scripts/poc.mjs --reset",
     "dev": "next dev -p 3000",
