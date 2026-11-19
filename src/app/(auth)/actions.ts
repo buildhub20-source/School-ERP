@@ -3,7 +3,7 @@ import { z } from "zod";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { db } from "@/lib/db";
-import { createSession, destroySession, getPendingTwoFactorUser, getUser, homePathFor, clientIp } from "@/lib/auth/session";
+import { createSession, destroySession, getPendingTwoFactorUser, getUser, homePathFor, clientIp, reissueSessionCookie } from "@/lib/auth/session";
 import { verifyPassword } from "@/lib/auth/password";
 import { verifyTotpStep } from "@/lib/auth/totp";
 import { hitRateLimit } from "@/lib/auth/rate-limit-db";
@@ -105,6 +105,7 @@ async function checkTwoFactor(_: Result | null, fd: FormData): Promise<Result> {
     return { ok: false, error: "That code is not correct. Check your authenticator app and try again." };
   }
   await db.session.update({ where: { id: pending.sessionId }, data: { twoFactorPending: false } });
+  await reissueSessionCookie(pending.sessionId);
   await runWithContext({ skipAudit: true }, () => db.user.update({ where: { id: user.id }, data: { twoFactorLastStep: step } }));
   await logAuth(pending.id, pending.name, "2FA_OK");
   return { ok: true, next: user.mustChangePassword ? "/account/password?first=1" : safeNext(String(fd.get("next") ?? ""), homePathFor(pending)) };

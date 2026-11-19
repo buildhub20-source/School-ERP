@@ -6,6 +6,7 @@ import { defineAction, zs } from "@/lib/action";
 import { AppError } from "@/lib/errors";
 import { checkPasswordStrength, hashPassword, verifyPassword } from "@/lib/auth/password";
 import { generateTotpSecret, totpUri, verifyTotpStep } from "@/lib/auth/totp";
+import { reissueSessionCookie } from "@/lib/auth/session";
 import { getSetting } from "@/lib/settings";
 
 export const setMyLanguage = defineAction({ selfService: true, schema: z.object({ language: z.enum(["en", "ta"]) }) }, async ({ language }, { user }) => {
@@ -22,6 +23,7 @@ export const setMyChannel = defineAction({ selfService: true, schema: z.object({
 export const switchBranch = defineAction({ schema: z.object({ branchId: zs.id }) }, async ({ branchId }, { user }) => {
   if (user.roleKey !== "SUPER_ADMIN") throw new AppError("Only the Super Admin can switch branches.");
   await db.session.update({ where: { id: user.sessionId }, data: { activeBranchId: branchId } });
+  await reissueSessionCookie(user.sessionId);
   return true;
 });
 
