@@ -17,6 +17,8 @@ const nextConfig: NextConfig = {
   // Lets a second server (e.g. a dev preview) build into its own folder without disturbing a running `next start`.
   distDir: process.env.NEXT_DIST_DIR || ".next",
   serverExternalPackages: ["pdfkit", "exceljs", "web-push", "node-cron", "razorpay", "nodemailer"],
+  // The JSON data engine reads its mock data at runtime; ship it with every server function (Netlify, standalone builds).
+  outputFileTracingIncludes: { "/**/*": ["./data/demo-data.json"] },
   experimental: {
     // Fewer build workers (default: one per CPU core) so `next build` fits on a machine with little free memory.
     cpus: 2,

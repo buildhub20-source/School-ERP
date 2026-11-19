@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import { Prisma } from "@prisma/client";
 import { MODEL_NAMES, meta } from "./schema";
@@ -17,7 +18,14 @@ export type Row = Record<string, unknown>;
 
 const ROOT = process.cwd();
 export const SNAPSHOT_FILE = path.join(ROOT, "data", "demo-data.json");
-export const WORKING_FILE = process.env.JSON_DB_FILE ? path.resolve(process.env.JSON_DB_FILE) : path.join(ROOT, ".poc", "data.json");
+// Serverless hosts (Netlify Functions / AWS Lambda) have a read-only app folder; only the temp dir is writable.
+// There the working copy lives in /tmp: changes last while the function instance stays warm, then reset to the snapshot.
+const SERVERLESS = Boolean(process.env.AWS_LAMBDA_FUNCTION_NAME || process.env.LAMBDA_TASK_ROOT || process.env.NETLIFY);
+export const WORKING_FILE = process.env.JSON_DB_FILE
+  ? path.resolve(process.env.JSON_DB_FILE)
+  : SERVERLESS
+    ? path.join(os.tmpdir(), "school-erp", "data.json")
+    : path.join(ROOT, ".poc", "data.json");
 const DAY = 86_400_000;
 
 export class Store {
@@ -126,10 +134,15 @@ export class Store {
     if (this.saveTimer) { clearTimeout(this.saveTimer); this.saveTimer = null; }
     const tables = Object.fromEntries(this.tables);
     const json = JSON.stringify({ exportedAt: new Date().toISOString(), tables }, (_k, v) => (typeof v === "bigint" ? v.toString() : v));
-    fs.mkdirSync(path.dirname(WORKING_FILE), { recursive: true });
-    const tmp = `${WORKING_FILE}.${process.pid}.tmp`;
-    fs.writeFileSync(tmp, json);
-    fs.renameSync(tmp, WORKING_FILE);
+    try {
+      fs.mkdirSync(path.dirname(WORKING_FILE), { recursive: true });
+      const tmp = `${WORKING_FILE}.${process.pid}.tmp`;
+      fs.writeFileSync(tmp, json);
+      fs.renameSync(tmp, WORKING_FILE);
+    } catch (err) {
+      // The data stays correct in memory; a failed save must never take the site down.
+      console.warn(`[json-db] could not save ${WORKING_FILE}: ${(err as Error).message}`);
+    }
     this.dirty = false;
   }
 
