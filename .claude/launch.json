@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "poc",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", "set POC_PORT=3102&& npm run poc"],
+      "port": 3102,
+      "autoPort": false
+    }
+  ]
+}

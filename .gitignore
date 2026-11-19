@@ -1,0 +1,20 @@
+node_modules
+.next
+.next-verify
+.env
+.env.local
+# Backups are full copies of school data and uploaded files: never commit them.
+backups/*
+!backups/.gitkeep
+.claude/settings.local.json
+# Locally installed AI-tool skills/agents and tool caches: not part of the app.
+.claude/skills/
+.claude/agents/
+.impeccable/hook.cache.json
+uploads/*
+!uploads/.gitkeep
+next-env.d.ts
+*.tsbuildinfo
+coverage
+.poc
+poc-run.log

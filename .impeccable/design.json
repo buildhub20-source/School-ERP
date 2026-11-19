@@ -1,0 +1,647 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-08T00:00:00Z",
+  "title": "Design System: School Management System",
+  "extensions": {
+    "colorMeta": {
+      "gold": {
+        "role": "primary",
+        "displayName": "Counter Gold",
+        "canonical": "#e9c95f",
+        "tonalRamp": [
+          "#2b2008",
+          "#4f3b10",
+          "#6f5212",
+          "#8f6a12",
+          "#b88b1b",
+          "#d1a52c",
+          "#e9c95f",
+          "#f9eec8"
+        ]
+      },
+      "gold-hover": {
+        "role": "primary",
+        "displayName": "Gold Hover",
+        "canonical": "#e0ba45",
+        "tonalRamp": [
+          "#2b2008",
+          "#4f3b10",
+          "#6f5212",
+          "#8f6a12",
+          "#b88b1b",
+          "#d1a52c",
+          "#e9c95f",
+          "#f9eec8"
+        ]
+      },
+      "gold-pressed": {
+        "role": "primary",
+        "displayName": "Gold Pressed",
+        "canonical": "#d1a52c",
+        "tonalRamp": [
+          "#2b2008",
+          "#4f3b10",
+          "#6f5212",
+          "#8f6a12",
+          "#b88b1b",
+          "#d1a52c",
+          "#e9c95f",
+          "#f9eec8"
+        ]
+      },
+      "gold-ink-light": {
+        "role": "primary",
+        "displayName": "Gold Ink (light theme)",
+        "canonical": "#8f6a12",
+        "tonalRamp": [
+          "#2b2008",
+          "#4f3b10",
+          "#6f5212",
+          "#8f6a12",
+          "#b88b1b",
+          "#d1a52c",
+          "#e9c95f",
+          "#f9eec8"
+        ]
+      },
+      "on-gold": {
+        "role": "primary",
+        "displayName": "Ink on Gold",
+        "canonical": "#231a05",
+        "tonalRamp": [
+          "#2b2008",
+          "#4f3b10",
+          "#6f5212",
+          "#8f6a12",
+          "#b88b1b",
+          "#d1a52c",
+          "#e9c95f",
+          "#f9eec8"
+        ]
+      },
+      "dark-canvas": {
+        "role": "neutral",
+        "displayName": "Night Canvas (dark)",
+        "canonical": "#0e0e10",
+        "tonalRamp": [
+          "#0e0e10",
+          "#121214",
+          "#17171a",
+          "#1e1e22",
+          "#2a2a30",
+          "#77777f",
+          "#a1a1aa",
+          "#f2f2f3"
+        ]
+      },
+      "light-canvas": {
+        "role": "neutral",
+        "displayName": "Night Canvas (light)",
+        "canonical": "#f4f4f5",
+        "tonalRamp": [
+          "#18181b",
+          "#3b3b42",
+          "#5f5f69",
+          "#a1a1aa",
+          "#d4d4d8",
+          "#e4e4e7",
+          "#f4f4f5",
+          "#ffffff"
+        ]
+      },
+      "dark-surface": {
+        "role": "neutral",
+        "displayName": "Graphite Panel (dark)",
+        "canonical": "#17171a",
+        "tonalRamp": [
+          "#0e0e10",
+          "#121214",
+          "#17171a",
+          "#1e1e22",
+          "#2a2a30",
+          "#77777f",
+          "#a1a1aa",
+          "#f2f2f3"
+        ]
+      },
+      "light-surface": {
+        "role": "neutral",
+        "displayName": "Graphite Panel (light)",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#18181b",
+          "#3b3b42",
+          "#5f5f69",
+          "#a1a1aa",
+          "#d4d4d8",
+          "#e4e4e7",
+          "#f4f4f5",
+          "#ffffff"
+        ]
+      },
+      "dark-surface-2": {
+        "role": "neutral",
+        "displayName": "Raised Graphite (dark)",
+        "canonical": "#1e1e22",
+        "tonalRamp": [
+          "#0e0e10",
+          "#121214",
+          "#17171a",
+          "#1e1e22",
+          "#2a2a30",
+          "#77777f",
+          "#a1a1aa",
+          "#f2f2f3"
+        ]
+      },
+      "light-surface-2": {
+        "role": "neutral",
+        "displayName": "Raised Graphite (light)",
+        "canonical": "#f4f4f5",
+        "tonalRamp": [
+          "#18181b",
+          "#3b3b42",
+          "#5f5f69",
+          "#a1a1aa",
+          "#d4d4d8",
+          "#e4e4e7",
+          "#f4f4f5",
+          "#ffffff"
+        ]
+      },
+      "dark-line": {
+        "role": "neutral",
+        "displayName": "Hairline (dark)",
+        "canonical": "#2a2a30",
+        "tonalRamp": [
+          "#0e0e10",
+          "#121214",
+          "#17171a",
+          "#1e1e22",
+          "#2a2a30",
+          "#77777f",
+          "#a1a1aa",
+          "#f2f2f3"
+        ]
+      },
+      "light-line": {
+        "role": "neutral",
+        "displayName": "Hairline (light)",
+        "canonical": "#e4e4e7",
+        "tonalRamp": [
+          "#18181b",
+          "#3b3b42",
+          "#5f5f69",
+          "#a1a1aa",
+          "#d4d4d8",
+          "#e4e4e7",
+          "#f4f4f5",
+          "#ffffff"
+        ]
+      },
+      "dark-rail": {
+        "role": "neutral",
+        "displayName": "Rail (dark)",
+        "canonical": "#121214",
+        "tonalRamp": [
+          "#0e0e10",
+          "#121214",
+          "#17171a",
+          "#1e1e22",
+          "#2a2a30",
+          "#77777f",
+          "#a1a1aa",
+          "#f2f2f3"
+        ]
+      },
+      "dark-ink": {
+        "role": "neutral",
+        "displayName": "Ink (dark)",
+        "canonical": "#f2f2f3",
+        "tonalRamp": [
+          "#0e0e10",
+          "#121214",
+          "#17171a",
+          "#1e1e22",
+          "#2a2a30",
+          "#77777f",
+          "#a1a1aa",
+          "#f2f2f3"
+        ]
+      },
+      "light-ink": {
+        "role": "neutral",
+        "displayName": "Ink (light)",
+        "canonical": "#18181b",
+        "tonalRamp": [
+          "#18181b",
+          "#3b3b42",
+          "#5f5f69",
+          "#a1a1aa",
+          "#d4d4d8",
+          "#e4e4e7",
+          "#f4f4f5",
+          "#ffffff"
+        ]
+      },
+      "dark-muted": {
+        "role": "neutral",
+        "displayName": "Muted (dark)",
+        "canonical": "#a1a1aa",
+        "tonalRamp": [
+          "#0e0e10",
+          "#121214",
+          "#17171a",
+          "#1e1e22",
+          "#2a2a30",
+          "#77777f",
+          "#a1a1aa",
+          "#f2f2f3"
+        ]
+      },
+      "light-muted": {
+        "role": "neutral",
+        "displayName": "Muted (light)",
+        "canonical": "#5f5f69",
+        "tonalRamp": [
+          "#18181b",
+          "#3b3b42",
+          "#5f5f69",
+          "#a1a1aa",
+          "#d4d4d8",
+          "#e4e4e7",
+          "#f4f4f5",
+          "#ffffff"
+        ]
+      },
+      "status-paid": {
+        "role": "tertiary",
+        "displayName": "Paid Green",
+        "canonical": "#10b981",
+        "tonalRamp": [
+          "#022c22",
+          "#064e3b",
+          "#065f46",
+          "#047857",
+          "#10b981",
+          "#34d399",
+          "#6ee7b7",
+          "#d1fae5"
+        ]
+      },
+      "status-due": {
+        "role": "tertiary",
+        "displayName": "Due Amber",
+        "canonical": "#f59e0b",
+        "tonalRamp": [
+          "#451a03",
+          "#78350f",
+          "#92400e",
+          "#b45309",
+          "#f59e0b",
+          "#fbbf24",
+          "#fcd34d",
+          "#fef3c7"
+        ]
+      },
+      "status-overdue": {
+        "role": "tertiary",
+        "displayName": "Overdue Red",
+        "canonical": "#f43f5e",
+        "tonalRamp": [
+          "#4c0519",
+          "#881337",
+          "#9f1239",
+          "#be123c",
+          "#f43f5e",
+          "#fb7185",
+          "#fda4af",
+          "#ffe4e6"
+        ]
+      },
+      "status-info": {
+        "role": "tertiary",
+        "displayName": "Follow-up Blue",
+        "canonical": "#0ea5e9",
+        "tonalRamp": [
+          "#082f49",
+          "#0c4a6e",
+          "#075985",
+          "#0369a1",
+          "#0ea5e9",
+          "#38bdf8",
+          "#7dd3fc",
+          "#e0f2fe"
+        ]
+      },
+      "chart-1-dark": {
+        "role": "secondary",
+        "displayName": "Chart series 1 (dark)",
+        "canonical": "#e9c95f",
+        "tonalRamp": [
+          "#e9c95f"
+        ]
+      },
+      "chart-1-light": {
+        "role": "secondary",
+        "displayName": "Chart series 1 (light)",
+        "canonical": "#c9971f",
+        "tonalRamp": [
+          "#c9971f"
+        ]
+      },
+      "chart-2-dark": {
+        "role": "secondary",
+        "displayName": "Chart series 2 (dark)",
+        "canonical": "#5aaef0",
+        "tonalRamp": [
+          "#5aaef0"
+        ]
+      },
+      "chart-2-light": {
+        "role": "secondary",
+        "displayName": "Chart series 2 (light)",
+        "canonical": "#2f8fd6",
+        "tonalRamp": [
+          "#2f8fd6"
+        ]
+      },
+      "chart-3-dark": {
+        "role": "secondary",
+        "displayName": "Chart series 3 (dark)",
+        "canonical": "#3fc792",
+        "tonalRamp": [
+          "#3fc792"
+        ]
+      },
+      "chart-3-light": {
+        "role": "secondary",
+        "displayName": "Chart series 3 (light)",
+        "canonical": "#1f9e6f",
+        "tonalRamp": [
+          "#1f9e6f"
+        ]
+      },
+      "chart-4-dark": {
+        "role": "secondary",
+        "displayName": "Chart series 4 (dark)",
+        "canonical": "#f08a5a",
+        "tonalRamp": [
+          "#f08a5a"
+        ]
+      },
+      "chart-4-light": {
+        "role": "secondary",
+        "displayName": "Chart series 4 (light)",
+        "canonical": "#d86a3a",
+        "tonalRamp": [
+          "#d86a3a"
+        ]
+      },
+      "chart-5-dark": {
+        "role": "secondary",
+        "displayName": "Chart series 5 (dark)",
+        "canonical": "#a98cf5",
+        "tonalRamp": [
+          "#a98cf5"
+        ]
+      },
+      "chart-5-light": {
+        "role": "secondary",
+        "displayName": "Chart series 5 (light)",
+        "canonical": "#8b6ae0",
+        "tonalRamp": [
+          "#8b6ae0"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page titles only (24px phones, 28px from 640px)."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Stat tile values; tabular."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card, panel and modal headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Table cells, descriptions, menus, nav items."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Stat labels, small buttons, section sub-page pills."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Hints, chips, table headers, description terms."
+      },
+      "nav-group": {
+        "displayName": "Nav Group",
+        "purpose": "Sidebar group headings only; uppercase."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-light",
+        "value": "0 1px 2px rgb(24 24 27 / 0.05), 0 2px 8px -2px rgb(24 24 27 / 0.06)",
+        "purpose": "In-flow cards, tiles, strips (light theme)."
+      },
+      {
+        "name": "card-dark",
+        "value": "0 1px 2px rgb(0 0 0 / 0.4), 0 6px 16px -6px rgb(0 0 0 / 0.5)",
+        "purpose": "In-flow cards, tiles, strips (dark theme)."
+      },
+      {
+        "name": "floating",
+        "value": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
+        "purpose": "Menus, search results, notifications, modals, toasts, drawer."
+      },
+      {
+        "name": "status-halo",
+        "value": "0 0 0 4px <status hue at 20%>",
+        "purpose": "Glowing dot in Needs attention rows."
+      },
+      {
+        "name": "focus-ring",
+        "value": "outline: 2px solid var(--gold); outline-offset: 2px",
+        "purpose": "Global :focus-visible."
+      },
+      {
+        "name": "field-focus",
+        "value": "0 0 0 2px rgb(233 201 95 / 0.3)",
+        "purpose": "Input and filter focus ring with brand-400 border."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-150",
+        "value": "150ms ease (Tailwind default cubic-bezier(0.4, 0, 0.2, 1))",
+        "purpose": "Colour, border and transform transitions on buttons, nav, rows."
+      },
+      {
+        "name": "press",
+        "value": "transform: scale(0.98)",
+        "purpose": "Button active state."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transition/animation duration 0.01ms",
+        "purpose": "Honoured globally under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "min-width",
+        "value": "375px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one gold action per header (Collect fee, Save).",
+      "html": "<button class=\"ds-btn-primary\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M12 5v14M5 12h14\"/></svg>Collect fee</button>",
+      "css": ":host{--canvas:#0e0e10;--surface:#17171a;--surface-2:#1e1e22;--line:#2a2a30;--ink:#f2f2f3;--muted:#a1a1aa;--gold:#e9c95f;--on-gold:#231a05;font-family:ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans Tamil', Latha, sans-serif;}.ds-btn-primary{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 20px;border:0;border-radius:9999px;background:#e9c95f;color:#231a05;font:500 14px/1 inherit;font-family:inherit;box-shadow:0 1px 2px rgb(0 0 0/.05);cursor:pointer;transition:background-color .15s,transform .15s}.ds-btn-primary:hover{background:#e0ba45}.ds-btn-primary:active{background:#d1a52c;transform:scale(.98)}.ds-btn-primary:focus-visible{outline:2px solid #e9c95f;outline-offset:2px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Labelled secondary action on a panel fill with a hairline.",
+      "html": "<button class=\"ds-btn-secondary\">Add student</button>",
+      "css": ":host{--canvas:#0e0e10;--surface:#17171a;--surface-2:#1e1e22;--line:#2a2a30;--ink:#f2f2f3;--muted:#a1a1aa;--gold:#e9c95f;--on-gold:#231a05;font-family:ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans Tamil', Latha, sans-serif;}.ds-btn-secondary{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 20px;border:1px solid var(--line);border-radius:9999px;background:var(--surface);color:var(--ink);font-family:inherit;font-weight:500;font-size:14px;cursor:pointer;transition:background-color .15s,border-color .15s,transform .15s}.ds-btn-secondary:hover{background:var(--surface-2);border-color:#3b3b42}.ds-btn-secondary:active{transform:scale(.98)}.ds-btn-secondary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Destructive action as a rose glaze, never solid red.",
+      "html": "<button class=\"ds-btn-danger\">Cancel receipt</button>",
+      "css": ":host{--canvas:#0e0e10;--surface:#17171a;--surface-2:#1e1e22;--line:#2a2a30;--ink:#f2f2f3;--muted:#a1a1aa;--gold:#e9c95f;--on-gold:#231a05;font-family:ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans Tamil', Latha, sans-serif;}.ds-btn-danger{height:40px;padding:0 20px;border-radius:9999px;border:1px solid color-mix(in oklab,#f43f5e 34%,#17171a);background:color-mix(in oklab,#f43f5e 14%,#17171a);color:#fda4af;font-family:inherit;font-weight:500;font-size:14px;cursor:pointer;transition:background-color .15s}.ds-btn-danger:hover{background:color-mix(in oklab,#f43f5e 20%,#17171a)}.ds-btn-danger:focus-visible{outline:2px solid var(--gold);outline-offset:2px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Form input as a canvas well in the panel; gold focus ring.",
+      "html": "<label class=\"ds-field\"><span>Amount</span><input class=\"ds-input\" placeholder=\"0.00\"></label>",
+      "css": ":host{--canvas:#0e0e10;--surface:#17171a;--surface-2:#1e1e22;--line:#2a2a30;--ink:#f2f2f3;--muted:#a1a1aa;--gold:#e9c95f;--on-gold:#231a05;font-family:ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans Tamil', Latha, sans-serif;}.ds-field{display:grid;gap:4px;color:var(--ink);font-size:14px;font-weight:500}.ds-input{height:40px;padding:8px 14px;border:1px solid var(--line);border-radius:12px;background:var(--canvas);color:var(--ink);font:inherit;font-weight:400;transition:border-color .15s}.ds-input::placeholder{color:var(--muted)}.ds-input:hover{border-color:#3b3b42}.ds-input:focus{outline:none;border-color:#e0ba45;box-shadow:0 0 0 2px rgb(233 201 95/.3)}"
+    },
+    {
+      "name": "Sidebar Navigation",
+      "kind": "nav",
+      "refersTo": "nav-item-active",
+      "description": "Grouped rail; the active module is a solid gold pill.",
+      "html": "<nav class=\"ds-rail\"><a class=\"ds-nav ds-on\" href=\"#\">Dashboard</a><p class=\"ds-grp\">Operations</p><a class=\"ds-nav\" href=\"#\">Students</a><a class=\"ds-nav\" href=\"#\">Fees</a></nav>",
+      "css": ":host{--canvas:#0e0e10;--surface:#17171a;--surface-2:#1e1e22;--line:#2a2a30;--ink:#f2f2f3;--muted:#a1a1aa;--gold:#e9c95f;--on-gold:#231a05;font-family:ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans Tamil', Latha, sans-serif;}.ds-rail{width:232px;padding:8px 12px;background:#121214;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:2px}.ds-grp{margin:16px 0 0;padding:0 12px 6px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgb(161 161 170/.8)}.ds-nav{display:block;padding:8px 12px;border-radius:9999px;color:var(--muted);font-size:14px;font-weight:500;text-decoration:none;transition:background-color .15s,color .15s}.ds-nav:hover{background:var(--surface-2);color:var(--ink)}.ds-nav.ds-on{background:#e9c95f;color:#231a05}.ds-nav:focus-visible{outline:2px solid var(--gold);outline-offset:2px}"
+    },
+    {
+      "name": "Section Pill Bar",
+      "kind": "nav",
+      "refersTo": "segmented-bar",
+      "description": "Module sub-pages as a segmented track; active is the gold glaze.",
+      "html": "<nav class=\"ds-seg\"><a href=\"#\" class=\"ds-on\">Overview</a><a href=\"#\">Collect fee</a><a href=\"#\">Student accounts</a></nav>",
+      "css": ":host{--canvas:#0e0e10;--surface:#17171a;--surface-2:#1e1e22;--line:#2a2a30;--ink:#f2f2f3;--muted:#a1a1aa;--gold:#e9c95f;--on-gold:#231a05;font-family:ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans Tamil', Latha, sans-serif;}.ds-seg{display:inline-flex;gap:2px;padding:4px;border:1px solid var(--line);border-radius:9999px;background:var(--surface-2)}.ds-seg a{padding:6px 14px;border-radius:9999px;font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}.ds-seg a:hover{color:var(--ink)}.ds-seg a.ds-on{background:color-mix(in oklab,#e9c95f 16%,#17171a);color:#e9c95f;font-weight:600}.ds-seg a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}"
+    },
+    {
+      "name": "Status Chip",
+      "kind": "chip",
+      "refersTo": "status-chip",
+      "description": "Dot plus word; tint glaze with inset ring.",
+      "html": "<span class=\"ds-chip ds-paid\"><i></i>Paid</span> <span class=\"ds-chip ds-over\"><i></i>Overdue</span>",
+      "css": ":host{--canvas:#0e0e10;--surface:#17171a;--surface-2:#1e1e22;--line:#2a2a30;--ink:#f2f2f3;--muted:#a1a1aa;--gold:#e9c95f;--on-gold:#231a05;font-family:ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans Tamil', Latha, sans-serif;}.ds-chip{display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:9999px;font-size:12px;font-weight:500;white-space:nowrap}.ds-chip i{width:6px;height:6px;border-radius:9999px}.ds-paid{background:color-mix(in oklab,#10b981 14%,#17171a);color:#6ee7b7;box-shadow:inset 0 0 0 1px color-mix(in oklab,#10b981 34%,#17171a)}.ds-paid i{background:#10b981}.ds-over{background:color-mix(in oklab,#f43f5e 14%,#17171a);color:#fda4af;box-shadow:inset 0 0 0 1px color-mix(in oklab,#f43f5e 34%,#17171a)}.ds-over i{background:#f43f5e}"
+    },
+    {
+      "name": "Stat Tile",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Figure tile with neutral icon chip, tabular value and hint.",
+      "html": "<a class=\"ds-stat\" href=\"#\"><div class=\"ds-row\"><span class=\"ds-ic\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\"><path d=\"M6 3h12M6 8h12M6 13l8.5 8M6 13h3a4.5 4.5 0 0 0 0-9\"/></svg></span>Collected today</div><p class=\"ds-v\">₹3,600</p><p class=\"ds-h\">Month ₹1,71,100</p></a>",
+      "css": ":host{--canvas:#0e0e10;--surface:#17171a;--surface-2:#1e1e22;--line:#2a2a30;--ink:#f2f2f3;--muted:#a1a1aa;--gold:#e9c95f;--on-gold:#231a05;font-family:ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans Tamil', Latha, sans-serif;}.ds-stat{display:flex;flex-direction:column;gap:12px;width:240px;padding:20px;border:1px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:0 1px 2px rgb(0 0 0/.4),0 6px 16px -6px rgb(0 0 0/.5);text-decoration:none;transition:border-color .15s}.ds-stat:hover{border-color:#3b3b42}.ds-row{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:500;color:var(--muted)}.ds-ic{display:grid;place-items:center;width:32px;height:32px;border-radius:12px;background:var(--surface-2);color:var(--muted)}.ds-v{margin:0;font-size:24px;font-weight:600;letter-spacing:-.025em;color:var(--ink);font-variant-numeric:tabular-nums}.ds-h{margin:4px 0 0;font-size:12px;color:var(--muted)}"
+    },
+    {
+      "name": "Needs Attention Row",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "Signature ranked alert row: glowing dot, label, status word, count, go.",
+      "html": "<a class=\"ds-att\" href=\"#\"><i></i><span class=\"ds-b\"><span><b>Overdue fees</b> <em>Act now</em></span><small>₹20,21,500 past the due date</small></span><strong>₹20,21,500</strong><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"m9 18 6-6-6-6\"/></svg></a>",
+      "css": ":host{--canvas:#0e0e10;--surface:#17171a;--surface-2:#1e1e22;--line:#2a2a30;--ink:#f2f2f3;--muted:#a1a1aa;--gold:#e9c95f;--on-gold:#231a05;font-family:ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans Tamil', Latha, sans-serif;}.ds-att{display:flex;align-items:center;gap:16px;width:420px;padding:14px 20px;background:var(--surface);border:1px solid var(--line);border-radius:16px;color:var(--muted);text-decoration:none;transition:background-color .15s}.ds-att:hover{background:var(--surface-2)}.ds-att i{width:8px;height:8px;border-radius:9999px;background:#f43f5e;box-shadow:0 0 0 4px rgb(244 63 94/.2)}.ds-b{flex:1;display:flex;flex-direction:column;gap:2px}.ds-b b{font-size:14px;font-weight:500;color:var(--ink)}.ds-b em{font-style:normal;font-size:11px;font-weight:500;color:#fda4af}.ds-b small{font-size:12px}.ds-att strong{font-size:16px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}.ds-att svg{transition:transform .15s}.ds-att:hover svg{transform:translateX(2px)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Counter Console",
+    "overview": "A calm, dark counter-console for a school office. The ground is near-black neutral, panels sit one step lighter in graphite with hairline borders and large soft radii, and soft gold is the only colour that asks for anything: the button to press, the page you are on, the link to follow. Everything else is quiet graphite and readable type, because the accountant at the fee counter looks at this for hours.\n\nDark is the default (class `dark` on `<html>`, set from the `theme` cookie); a light mirror on white and pale zinc is one switch away, and print and PDFs are always light. The dark theme works by remapping the Tailwind slate and status palette variables on screen only, so 100+ pages that use slate and status utilities change together without per-page edits. The world was adapted from a user-pinned dark gold admin console and replaces the stock white-card indigo admin template the app shipped with.\n\nDensity is moderate: 14px body, 40px controls, 16 to 20px card padding. State is always a small light plus a word, never colour alone. Labels stay visible; nothing a non-technical clerk needs is hidden behind an icon. The interface carries no school brand of its own: any uploaded logo sits on a neutral tile, or a neutral school glyph stands in.",
+    "keyCharacteristics": [
+      "Near-black canvas, graphite panels, hairline lines; light theme mirrors on white and pale zinc.",
+      "One accent, soft gold (#e9c95f), with dark ink (#231a05) on it, used only for action, selection and links.",
+      "Pills everywhere you click: buttons, nav items, segmented bars, filters, chips.",
+      "State as glowing dot plus word: green paid, amber due, red overdue, blue follow up.",
+      "One system sans with Tamil fallbacks; tabular figures for every amount.",
+      "Flat-by-default panels with a faint card shadow; real shadows only on floating layers."
+    ],
+    "rules": [
+      {
+        "name": "The Gold Means Go Rule",
+        "body": "Gold appears only on primary actions, selection states (active nav, active tab, active sub-page) and links. Avatars, logo tiles, stat icon chips, stop numbers and decorative icons stay neutral graphite. If gold is on something you cannot press or are not currently on, it is wrong.",
+        "section": "colors"
+      },
+      {
+        "name": "The Dot and Word Rule",
+        "body": "State is always a small light plus a word (\"Paid\", \"Act now\", \"Soon\", \"Follow up\"). Never colour alone, never an icon's colour alone.",
+        "section": "colors"
+      },
+      {
+        "name": "The Light Paper Rule",
+        "body": "Print and PDF output is always light: the dark remap lives inside `@media screen`, and print forces a white body with #18181b text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Money Rule",
+        "body": "Every amount, count and pagination range uses tabular figures so columns of rupees align.",
+        "section": "typography"
+      },
+      {
+        "name": "The Float-Only Shadow Rule",
+        "body": "Only layers above the page (menus, dialogs, toasts, drawers) get a heavy shadow; anything in the page flow uses the card shadow or none.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep gold (#e9c95f) to primary actions, active navigation and tab states, and links; put Ink on Gold (#231a05) on every gold fill.",
+      "**Do** say every state as a dot (or chip) plus a word.",
+      "**Do** keep text labels on secondary actions; icon-only is for universally understood utilities (close, bell, settings, sign out) that carry an aria-label.",
+      "**Do** let primary navigation labels wrap rather than truncate; Tamil labels run longer than English.",
+      "**Do** use tabular figures for amounts, and right-align numeric table columns.",
+      "**Do** style through the shared kit and theme variables (`canvas`, `surface`, `surface-2`, `line`, `ink`, `muted`, `rail`, `brand`) so both themes and all pages follow.",
+      "**Do** keep print and PDF output light.",
+      "**Do** keep logo tiles neutral so any school's uploaded logo, or none, looks right."
+    ],
+    "donts": [
+      "**Don't** put gold on avatars, logo tiles, stat icon chips, stop numbers or decorative icons.",
+      "**Don't** signal state by colour alone, or by an icon's colour alone.",
+      "**Don't** use solid red or green buttons; danger and success are tinted glazes.",
+      "**Don't** put light text on gold.",
+      "**Don't** add heavy shadows to in-flow panels.",
+      "**Don't** let the dark remap leak into print."
+    ]
+  }
+}

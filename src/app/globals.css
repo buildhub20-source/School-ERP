@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+/*
+ * Theme: dark by default (class "dark" on <html>, from the "theme" cookie), light on request.
+ * Pages use Tailwind's slate / white / status colours directly, so the dark theme remaps those palette variables
+ * (screen only — print and PDFs stay light). Gold ("brand") is the single action and selection colour in both themes;
+ * text on gold uses `text-on-brand`.
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans Tamil", "Latha", sans-serif;
+
+  /* Soft gold */
+  --color-brand-50: #fdf8e9;
+  --color-brand-100: #f9eec8;
+  --color-brand-200: #f2dc8e;
+  --color-brand-300: #e9c95f;
+  --color-brand-400: #e0ba45;
+  --color-brand-500: #d1a52c;
+  --color-brand-600: #b88b1b;
+  --color-brand-700: #8f6a12;
+  --color-brand-800: #6f5212;
+  --color-brand-900: #4f3b10;
+  --color-brand-950: #2b2008;
+  --color-on-brand: #231a05;
+
+  /* Semantic surfaces (values per theme below) */
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-rail: var(--rail);
+}
+
+:root {
+  color-scheme: light;
+  --canvas: #f4f4f5;
+  --surface: #ffffff;
+  --surface-2: #f4f4f5;
+  --line: #e4e4e7;
+  --ink: #18181b;
+  --muted: #5f5f69;
+  --rail: #ffffff;
+  --gold: var(--color-brand-400);
+  --gold-ink: var(--color-brand-700);
+  --gold-soft: color-mix(in oklab, var(--color-brand-400) 22%, white);
+  --chart-1: #c9971f;
+  --chart-2: #2f8fd6;
+  --chart-3: #1f9e6f;
+  --chart-4: #d86a3a;
+  --chart-5: #8b6ae0;
+  --chart-grid: #e4e4e7;
+  --chart-text: #5f5f69;
+  /* Attendance-lost colour for the class comparison chart (checked for contrast and lightness in both themes). */
+  --att-absent: #d86a3a;
+  --shadow-card: 0 1px 2px rgb(24 24 27 / 0.05), 0 2px 8px -2px rgb(24 24 27 / 0.06);
+}
+
+@media screen {
+  .dark {
+    color-scheme: dark;
+    --canvas: #0e0e10;
+    --surface: #17171a;
+    --surface-2: #1e1e22;
+    --line: #2a2a30;
+    --ink: #f2f2f3;
+    --muted: #a1a1aa;
+    --rail: #121214;
+    --gold: var(--color-brand-300);
+    --gold-ink: var(--color-brand-300);
+    --gold-soft: color-mix(in oklab, var(--color-brand-300) 16%, #17171a);
+    --chart-1: #e9c95f;
+    --chart-2: #5aaef0;
+    --chart-3: #3fc792;
+    --chart-4: #f08a5a;
+    --chart-5: #a98cf5;
+    --chart-grid: #2a2a30;
+    --chart-text: #a1a1aa;
+    --att-absent: #cf6537;
+    --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 6px 16px -6px rgb(0 0 0 / 0.5);
+
+    /* Neutral scale inverted: light text on dark panels */
+    --color-slate-50: #1c1c20;
+    --color-slate-100: #232328;
+    --color-slate-200: #2c2c32;
+    --color-slate-300: #3b3b42;
+    --color-slate-400: #77777f;
+    --color-slate-500: #a1a1aa;
+    --color-slate-600: #b9b9c0;
+    --color-slate-700: #d4d4d8;
+    --color-slate-800: #e4e4e7;
+    --color-slate-900: #f2f2f3;
+    --color-slate-950: #fafafa;
+
+    /* Gold: tints become dark gold glazes, deep golds become readable light golds */
+    --color-brand-50: color-mix(in oklab, #e9c95f 12%, #17171a);
+    --color-brand-100: color-mix(in oklab, #e9c95f 18%, #17171a);
+    --color-brand-200: color-mix(in oklab, #e9c95f 30%, #17171a);
+    --color-brand-600: #e0ba45;
+    --color-brand-700: #e9c95f;
+    --color-brand-800: #f2dc8e;
+    --color-brand-900: #f9eec8;
+
+    /* Status colours: pale tints become glazes on the dark panel, dark text shades become light ones */
+    --color-emerald-50: color-mix(in oklab, #10b981 14%, #17171a);
+    --color-emerald-100: color-mix(in oklab, #10b981 20%, #17171a);
+    --color-emerald-200: color-mix(in oklab, #10b981 34%, #17171a);
+    --color-emerald-700: #6ee7b7;
+    --color-emerald-800: #a7f3d0;
+    --color-rose-50: color-mix(in oklab, #f43f5e 14%, #17171a);
+    --color-rose-100: color-mix(in oklab, #f43f5e 20%, #17171a);
+    --color-rose-200: color-mix(in oklab, #f43f5e 34%, #17171a);
+    --color-rose-600: #fb7185;
+    --color-rose-700: #fda4af;
+    --color-rose-800: #fecdd3;
+    --color-amber-50: color-mix(in oklab, #f59e0b 14%, #17171a);
+    --color-amber-100: color-mix(in oklab, #f59e0b 20%, #17171a);
+    --color-amber-200: color-mix(in oklab, #f59e0b 34%, #17171a);
+    --color-amber-700: #fcd34d;
+    --color-amber-800: #fde68a;
+    --color-sky-50: color-mix(in oklab, #0ea5e9 14%, #17171a);
+    --color-sky-100: color-mix(in oklab, #0ea5e9 20%, #17171a);
+    --color-sky-200: color-mix(in oklab, #0ea5e9 34%, #17171a);
+    --color-sky-700: #7dd3fc;
+    --color-sky-800: #bae6fd;
+    --color-blue-50: color-mix(in oklab, #3b82f6 14%, #17171a);
+    --color-blue-100: color-mix(in oklab, #3b82f6 20%, #17171a);
+    --color-blue-200: color-mix(in oklab, #3b82f6 34%, #17171a);
+    --color-blue-700: #93c5fd;
+    --color-blue-800: #bfdbfe;
+    --color-violet-50: color-mix(in oklab, #8b5cf6 14%, #17171a);
+    --color-violet-100: color-mix(in oklab, #8b5cf6 20%, #17171a);
+    --color-violet-200: color-mix(in oklab, #8b5cf6 34%, #17171a);
+    --color-violet-700: #c4b5fd;
+    --color-violet-800: #ddd6fe;
+    --color-orange-50: color-mix(in oklab, #f97316 14%, #17171a);
+    --color-orange-100: color-mix(in oklab, #f97316 20%, #17171a);
+    --color-orange-700: #fdba74;
+  }
+
+  /* White panels become the theme's panel colour (white text stays white). */
+  .dark .bg-white { background-color: var(--surface); }
+  .dark .bg-white\/95, .dark .bg-white\/90 { background-color: color-mix(in oklab, var(--surface) 92%, transparent); }
+  .dark .hover\:bg-white:hover { background-color: var(--surface-2); }
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body { background-color: var(--canvas); color: var(--ink); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  input, select, textarea { font-size: 16px; } /* avoid iOS zoom */
+  @media (min-width: 640px) { input, select, textarea { font-size: 14px; } }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  ::selection { background: color-mix(in oklab, var(--color-brand-300) 45%, transparent); color: inherit; }
+  input, textarea { caret-color: var(--gold); }
+  html { accent-color: var(--color-brand-500); }
+  table { font-variant-numeric: tabular-nums; }
+  /* No browser up/down spinners on number fields: they clash with the design (arrow keys still work). */
+  input[type="number"] { -moz-appearance: textfield; appearance: textfield; font-variant-numeric: tabular-nums; }
+  input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+  * { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; color: #18181b; }
+  .print-full { width: 100% !important; margin: 0 !important; padding-left: 0 !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+.leaflet-container { z-index: 0; }
