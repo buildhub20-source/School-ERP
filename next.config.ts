@@ -17,8 +17,19 @@ const nextConfig: NextConfig = {
   // Lets a second server (e.g. a dev preview) build into its own folder without disturbing a running `next start`.
   distDir: process.env.NEXT_DIST_DIR || ".next",
   serverExternalPackages: ["pdfkit", "exceljs", "web-push", "node-cron", "razorpay", "nodemailer"],
-  // The JSON data engine reads its mock data at runtime; ship it with every server function (Netlify, standalone builds).
-  outputFileTracingIncludes: { "/**/*": ["./data/demo-data.json"] },
+  // Files read from disk at runtime. Next's tracer cannot see these reads, so they must be listed
+  // explicitly or they are missing from the serverless bundle (Netlify, standalone builds).
+  outputFileTracingIncludes: {
+    "/**/*": [
+      // The JSON data engine reads its mock data at runtime.
+      "./data/demo-data.json",
+      // pdfkit is a serverExternalPackage and loads the standard-14 font metrics from its own
+      // package directory. Without these every PDF route fails on the first doc.font() call.
+      "./node_modules/pdfkit/js/data/**",
+      // src/lib/pdf-tamil.ts resolves these through process.cwd() to shape Tamil text in PDFs.
+      "./assets/fonts/*.ttf",
+    ],
+  },
   experimental: {
     // Fewer build workers (default: one per CPU core) so `next build` fits on a machine with little free memory.
     cpus: 2,
